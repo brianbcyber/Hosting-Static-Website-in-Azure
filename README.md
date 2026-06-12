@@ -1,10 +1,10 @@
 # Lab 01: Hosting a Static Website on Azure Blob Storage
 
-**Author:** Jhante Charles
-**Difficulty:** Beginner
-**Estimated Time:** 30 minutes
-**Cloud Provider:** Microsoft Azure
-**Category:** Cloud Storage / Serverless / PaaS Fundamentals
+## 🎥 Live Demonstration Video
+
+> 
+>https://www.loom.com/share/3b3c3a84162f466d8d5ce6374e311c67
+> 
 
 ---
 
@@ -53,8 +53,8 @@ flowchart LR
 
 | Resource | Naming Pattern | Example |
 |---|---|---|
-| Resource Group | `rg-lab01-[yourname]` | `rg-lab01-jhante` |
-| Storage Account | `stlab01[yourname]` | `stlab01jhante` |
+| Resource Group | `rg-lab01-[yourname]` | `rg-lab01-name` |
+| Storage Account | `stlab01[yourname]` | `stlab01name` |
 | Region | East US | — |
 
 > ⚠️ **Note:** Storage account names must be globally unique across all of Azure, lowercase only, and contain no special characters.
@@ -86,7 +86,7 @@ flowchart LR
    - **Index document name:** `index.html`
    - **Error document path:** `404.html`
 4. Click **Save**.
-5. **Copy the Primary endpoint URL** — this is the public site address (e.g., `https://stlab01jhante.z13.web.core.windows.net/`).
+5. **Copy the Primary endpoint URL** — this is the public site address (e.g., `https://stlab01name.z13.web.core.windows.net/`).
 
 ### Phase 4 — Create the Website Content
 A minimal `index.html` is included in this repo under [`/site/index.html`](./site/index.html). It contains a simple styled landing page confirming successful deployment.
@@ -116,7 +116,7 @@ A minimal `index.html` is included in this repo under [`/site/index.html`](./sit
 | Issue | Cause | Fix |
 |---|---|---|
 | `404 - The requested content does not exist` | File not named exactly `index.html`, or uploaded to the wrong container | Confirm the filename is lowercase `index.html` and was uploaded to the **`$web`** container specifically |
-| `Storage account name is already taken` | Storage account names are globally unique across **all** Azure tenants | Append random digits to the name, e.g., `stlab01jhante99` |
+| `Storage account name is already taken` | Storage account names are globally unique across **all** Azure tenants | Append random digits to the name, e.g., `stlab01name99` |
 | Site loads but shows old content | Browser caching | Hard refresh (Ctrl+Shift+R) or test in an incognito window |
 
 ---
@@ -158,4 +158,4 @@ To avoid unnecessary costs and keep your environment tidy:
 
 ## 📜 License
 
-This lab documentation is provided for educational purposes as part of a cloud security/fundamentals training series.
+This lab documentation is provided for educational purposes.
